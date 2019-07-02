@@ -1,0 +1,90 @@
+body{
+  background: black;
+  color:white;
+
+    animation-name:pointer;
+}
+
+h1 {
+  color:white;
+}
+
+a {
+  text-decoration:none;
+  color:white;
+}
+/* 
+a:hover{
+  background:blue;
+
+} */
+
+li {
+  font-size:18px;
+  padding:3px;
+}
+
+li:hover{
+  background: blue;
+}
+
+.wave{
+  margin:600px auto;
+  animation-name:wave;
+  position: relative;
+  opacity: 0;
+  top: 0;
+  width: 2px;
+  height: 1px;
+  border: #FFF 4px solid;
+  border-radius: 300px / 150px;
+  animation-name: ripple;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-dylay:12s;
+}
+
+.wave:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  top: -5px;
+  left: -5px;
+    width: 2px;
+    height: 1px;
+  border: #FFF 5px solid;
+    border-radius: 300px / 150px;
+  animation-name: ripple-2;
+  animation-duration: 10s;
+  animation-dylay:12s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes ripple{
+    from {
+    opacity: 1;
+  }
+  to {
+    width: 600px;
+    height: 300px;
+    border-width: 1px;
+    top: -100px;
+    opacity: 0;
+  }
+}
+
+@keyframes ripple-2 {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  100% {
+    width: 200px;
+    height: 100px;
+    border-width: 1px;
+    top: 100px;
+    left: 200px;
+  }
+}
